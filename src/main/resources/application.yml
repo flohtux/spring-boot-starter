@@ -1,0 +1,18 @@
+spring:
+  security:
+    oauth2:
+      client:
+        provider:
+          # provider name used for registration
+          demo-provider:
+            # Keycloak realm URL: "{keycloak-url}/realms/{realm-name}"
+            issuer-uri: https://login.sparkasse.fi/realms/spring-demo
+        registration:
+          # client-id from Keycloak client configuration
+          demo-client:
+            # provider from above
+            provider: demo-provider
+            # client-id from Keycloak client configuration
+            client-id: florian-local
+            client-secret: Kegax8kRTiRCqWxNE5ltH4l6XP36NBSJ
+            scope: openid
